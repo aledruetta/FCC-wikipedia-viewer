@@ -1,0 +1,36 @@
+{
+  "name": "FCC-wikipedia-viewer",
+  "version": "0.1.0",
+  "description": "freeCodeCamp Wikipedia Viewer project",
+  "main": "app.js",
+  "repository": "git@github.com:aledruetta/FCC-wikipedia-viewer.git",
+  "author": "Alejandro Druetta <aledruetta@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "css": "csslint --ignore=order-alphabetical,box-model src/css/*.css",
+    "js": "jshint --reporter=node_modules/jshint-stylish src/js/*.js",
+    "w3c-src": "node_modules/w3cjs/bin/w3cjs validate src/index.html",
+    "w3c-dist": "node_modules/w3cjs/bin/w3cjs validate dist/index.html",
+    "lint": "yarn run css && yarn run js && yarn run w3c-src",
+    "images": "imagemin src/img/* -o dist/img",
+    "inline": "htmlprocessor src/index.html -o dist/index-inline.html",
+    "minify": "html-minifier -c html-minifier.conf dist/index-inline.html -o dist/index.html && rm dist/index-inline.html",
+    "dist": "yarn run lint && yarn run inline && yarn run minify && yarn run images && yarn run w3c-dist"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "csslint": "^1.0.5",
+    "font-awesome": "^4.7.0",
+    "html-minifier": "^3.5.2",
+    "htmlprocessor": "^0.2.4",
+    "imagemin": "^5.3.1",
+    "imagemin-cli": "^3.0.0",
+    "jest": "^20.0.4",
+    "jquery": "^3.2.1",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "w3cjs": "^0.3.0",
+    "knockout": "^3.4.2"
+  }
+}
