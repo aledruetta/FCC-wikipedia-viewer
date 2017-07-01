@@ -18,7 +18,9 @@ $(function() {
     };
 
     this.clickClear = function() {
-      self.search(searchPlaceholder);
+      if (self.search() !== searchPlaceholder) {
+        self.search(searchPlaceholder);
+      }
     };
 
   };
