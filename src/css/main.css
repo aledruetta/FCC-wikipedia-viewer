@@ -33,6 +33,7 @@ body {
   border-radius: 1.5em;
 }
 
+.search input,
 .search input::placeholder {
   color: orange;
   font-weight: 600;
@@ -41,6 +42,11 @@ body {
 .fa-times {
   color: orange;
   font-size: 1.1em;
+}
+
+.fa-times:hover {
+  color: #66afe9;
+  text-shadow: 1px 1px 12px #66afe9;
 }
 
 .input-container {
