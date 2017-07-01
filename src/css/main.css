@@ -1,0 +1,46 @@
+html,
+body,
+.container {
+  height: 100%;
+}
+
+body {
+  font-family: Dosis, sans-serif;
+  background-color: #233f57;
+}
+
+.container .row {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search input,
+.random button {
+  font-size: 1.3em;
+  width: 12em;
+  height: 3em;
+}
+
+.search input {
+  background-color: #233f57;
+  border: 3px solid orange;
+  border-radius: 1.5em;
+  margin: 0 auto;
+}
+
+.search input::placeholder {
+  color: orange;
+}
+
+.random {
+  margin-bottom: 0;
+}
+
+.random button {
+  background-color: orange;
+  color: #233f57;
+  border: 0;
+  border-radius: 1.5em;
+  font-weight: 600;
+}
