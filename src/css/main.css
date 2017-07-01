@@ -15,6 +15,11 @@ body {
   transform: translateY(-50%);
 }
 
+.search {
+  display: flex;
+  align-items: center;
+}
+
 .search input,
 .random button {
   font-size: 1.3em;
@@ -26,11 +31,25 @@ body {
   background-color: #233f57;
   border: 3px solid orange;
   border-radius: 1.5em;
-  margin: 0 auto;
 }
 
 .search input::placeholder {
   color: orange;
+  font-weight: 600;
+}
+
+.fa-times {
+  color: orange;
+  font-size: 1.1em;
+}
+
+.input-container {
+  margin: 0 auto;
+}
+
+.clear-container {
+  position: absolute;
+  left: calc(50% + 5.5em);
 }
 
 .random {
