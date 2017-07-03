@@ -15,28 +15,39 @@ body {
   transform: translateY(-50%);
 }
 
-.search {
+.input-container,
+.random-container {
+  width: 19em;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.input-container {
+  position: relative;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
 .search input,
 .random button {
   font-size: 1.3em;
-  width: 12em;
   height: 3em;
 }
 
 .search input {
   background-color: #233f57;
+  color: orange;
+  font-weight: 600;
   border: 3px solid orange;
   border-radius: 1.5em;
 }
 
-.search input,
-.search input::placeholder {
-  color: orange;
-  font-weight: 600;
+.clear-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(7em);
 }
 
 .fa-times {
@@ -47,15 +58,6 @@ body {
 .fa-times:hover {
   color: #66afe9;
   text-shadow: 1px 1px 12px #66afe9;
-}
-
-.input-container {
-  margin: 0 auto;
-}
-
-.clear-container {
-  position: absolute;
-  left: calc(50% + 5.5em);
 }
 
 .random {

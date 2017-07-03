@@ -37,21 +37,23 @@
         <div class="col-sm-12">
           <form class="form" data-bind="submit: processSearch">
 
-            <div class="form-group search">
+            <div class="form-group text-center search">
               <!-- Search -->
               <div class="input-container">
                 <input type="search" class="form-control text-center"
                   data-bind="value: search, click: clickSearch, event: { blur: processSearch }">
-              </div>
-              <!-- Clear -->
-              <div class="clear-container" data-bind="click: clickClear">
-                <i class="fa fa-times" aria-hidden="true"></i>
+                <!-- Clear -->
+                <div class="clear-container" data-bind="click: clickClear">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
               </div>
             </div>
 
             <!-- Random -->
             <div class="form-group text-center random">
-              <button type="button" name="random" class="btn btn-default" id="random">Click for random</button>
+              <div class="random-container">
+                <button type="button" name="random" class="btn btn-default btn-block" id="random">Click for random</button>
+              </div>
             </div>
 
           </form>
