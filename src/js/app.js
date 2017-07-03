@@ -6,6 +6,9 @@ $(function() {
     var searchPlaceholder = 'Click to search';
 
     this.search = ko.observable(searchPlaceholder);
+    this.search.subscribe(function(latest) {
+      console.log(latest);
+    }, this);
 
     this.clickSearch = function() {
       self.search('');
