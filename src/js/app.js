@@ -11,9 +11,11 @@ $(function() {
       self.search('');
     };
 
-    this.onBlurSearch = function() {
+    this.processSearch = function() {
       if (this.search() === '') {
         this.search(searchPlaceholder);
+      } else {
+        //
       }
     };
 

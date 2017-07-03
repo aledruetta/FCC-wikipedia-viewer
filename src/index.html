@@ -32,24 +32,40 @@
   <body>
 
     <div class="container">
+
       <div class="row">
-        <div class="col-xs-12">
-          <form class="form">
+        <div class="col-sm-12">
+          <form class="form" data-bind="submit: processSearch">
+
             <div class="form-group search">
+              <!-- Search -->
               <div class="input-container">
                 <input type="search" class="form-control text-center"
-                  data-bind="value: search, click: clickSearch, event: { blur: onBlurSearch }">
+                  data-bind="value: search, click: clickSearch, event: { blur: processSearch }">
               </div>
+              <!-- Clear -->
               <div class="clear-container" data-bind="click: clickClear">
                 <i class="fa fa-times" aria-hidden="true"></i>
               </div>
             </div>
+
+            <!-- Random -->
             <div class="form-group text-center random">
               <button type="button" name="random" class="btn btn-default" id="random">Click for random</button>
             </div>
+
           </form>
         </div>
       </div>
+
+      <!-- Results -->
+
+      <div class="row">
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+
     </div>
 
     <!-- CDN -->
