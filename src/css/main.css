@@ -42,6 +42,8 @@ body {
   font-weight: 600;
   border: 3px solid orange;
   border-radius: 1.5em;
+  padding-right: 2.3em;
+  padding-left: 2.3em;
 }
 
 .clear-container {

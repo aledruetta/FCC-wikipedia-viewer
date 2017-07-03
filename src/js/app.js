@@ -11,7 +11,9 @@ $(function() {
     }, this);
 
     this.clickSearch = function() {
-      self.search('');
+      if (self.search() === searchPlaceholder) {
+        self.search('');
+      }
     };
 
     this.processSearch = function() {
