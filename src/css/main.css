@@ -28,6 +28,7 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  transition: width 0.3s ease-in-out;
 }
 
 .search input,
@@ -50,6 +51,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(7em);
+  transition: transform 0.3s ease-in-out;
 }
 
 .fa-times {
