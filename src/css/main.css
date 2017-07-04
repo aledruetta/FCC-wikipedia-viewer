@@ -69,11 +69,17 @@ body {
 }
 
 .random button {
-  background-color: orange;
-  color: #233f57;
   border: 0;
   border-radius: 1.5em;
   font-weight: 600;
+}
+
+.random button,
+.random button:focus,
+.random button:active,
+.random button:visited {
+  background-color: orange;
+  color: #233f57;
 }
 
 .random button:hover {
