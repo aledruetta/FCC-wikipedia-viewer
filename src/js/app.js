@@ -1,7 +1,7 @@
 $(function() {
   'use strict';
 
-  var appViweModel = function() {
+  function WikiViewerViewModel() {
     var self = this;
     var searchPlaceholder = 'Click to search';
     var inputLong = false;
@@ -64,7 +64,8 @@ $(function() {
       }
     };
 
-  };
+  }
 
-  ko.applyBindings(new appViweModel());
+  var appViewModel = new WikiViewerViewModel();
+  ko.applyBindings(appViewModel);
 });

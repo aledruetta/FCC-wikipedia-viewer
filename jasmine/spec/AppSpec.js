@@ -1,6 +1,5 @@
-describe("Player", function() {
-  var player;
-  var song;
+describe("Viewer", function() {
+  var viewer;
 
   beforeEach(function() {
     player = new Player();
