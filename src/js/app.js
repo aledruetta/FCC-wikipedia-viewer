@@ -1,8 +1,7 @@
 $(document).ready(function() {
   'use strict';
 
-  var wikiViewerViewModel = new WikiViewerViewModel();
-  ko.applyBindings(wikiViewerViewModel);
+  ko.applyBindings(new WikiViewerViewModel());
 });
 
 function WikiViewerViewModel() {
