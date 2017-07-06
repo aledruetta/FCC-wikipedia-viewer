@@ -17,14 +17,14 @@ describe('Wikipedia Viewer', function() {
     });
 
     it('Should hide placeholder when click on', function() {
-      viewModel.clickSearch();
+      viewModel.focusSearch();
       text = viewModel.search();
 
       expect(text).toBe('');
     });
 
     it('Should show placeholder when blur and nothing change', function() {
-      viewModel.clickSearch();
+      viewModel.focusSearch();
       viewModel.processSearch();
       text = viewModel.search();
 
@@ -65,7 +65,7 @@ describe('Wikipedia Viewer', function() {
     });
 
     it('Should show placeholder when click on search and then click on clear', function() {
-      viewModel.clickSearch();
+      viewModel.focusSearch();
       viewModel.clickClear();
       text = viewModel.search();
 

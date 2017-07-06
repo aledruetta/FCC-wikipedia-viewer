@@ -15,12 +15,13 @@ function WikiViewerViewModel() {
   this.search.subscribe(function(latest) {
     console.log(latest);
   }, this);
+  this.isFormCentered = ko.observable(true);
 
-  this.clickSearch = function() {
+  this.focusSearch = function() {
     this.growSearch();
 
     if (self.search() === searchPlaceholder) {
-      self.search('');
+      this.search('');
     }
   };
 
@@ -28,7 +29,7 @@ function WikiViewerViewModel() {
     this.shrinkSearch();
 
     if (self.search() !== searchPlaceholder) {
-      self.search(searchPlaceholder);
+      this.search(searchPlaceholder);
     }
   };
 
@@ -37,7 +38,7 @@ function WikiViewerViewModel() {
       this.search(searchPlaceholder);
       this.shrinkSearch();
     } else {
-      //
+      this.isFormCentered(false);
     }
   };
 

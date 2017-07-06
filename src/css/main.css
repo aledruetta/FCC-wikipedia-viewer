@@ -9,7 +9,7 @@ body {
   background-color: #233f57;
 }
 
-.container .row {
+.vertical-center {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);

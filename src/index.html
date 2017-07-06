@@ -33,31 +33,38 @@
 
     <div class="container">
 
-      <div class="row">
-        <div class="col-sm-12">
-          <form class="form" data-bind="submit: processSearch">
+      <div class="row" data-bind="css: { 'vertical-center': isFormCentered() }">
+        <form class="form" data-bind="submit: processSearch">
 
-            <div class="form-group text-center search">
-              <!-- Search -->
-              <div class="input-container">
-                <input type="search" class="form-control text-center"
-                  data-bind="textInput: search, click: clickSearch, event: { blur: processSearch }">
-                <!-- Clear -->
-                <div class="clear-container" data-bind="click: clickClear">
-                  <i class="fa fa-times" aria-hidden="true"></i>
+          <div class="row">
+            <div class="col-xs-12" data-bind="css: { 'col-sm-8': ! isFormCentered() }">
+
+              <div class="form-group text-center search">
+                <!-- Search -->
+                <div class="input-container">
+                  <input type="search" class="form-control text-center"
+                  data-bind="textInput: search, event: { focus: focusSearch, blur: processSearch }">
+                  <!-- Clear -->
+                  <div class="clear-container" data-bind="click: clickClear">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Random -->
-            <div class="form-group text-center random">
-              <div class="random-container">
-                <button type="button" name="random" class="btn btn-default btn-block" id="random">Click for random</button>
+            <div class="col-xs-12" data-bind="css: { 'col-sm-4': ! isFormCentered() }">
+
+              <!-- Random -->
+              <div class="form-group text-center random">
+                <div class="random-container">
+                  <button type="button" name="random" class="btn btn-default btn-block" id="random">Click for random</button>
+                </div>
               </div>
             </div>
 
-          </form>
-        </div>
+          </div>
+
+        </form>
       </div>
 
       <!-- Results -->
@@ -67,7 +74,6 @@
 
         </div>
       </div>
-
     </div>
 
     <!-- CDN -->
