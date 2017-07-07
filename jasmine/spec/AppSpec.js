@@ -50,7 +50,7 @@ describe('Wikipedia Viewer', function() {
     });
 
     it('Should keep placeholder when click on', function() {
-      viewModel.clickClear();
+      viewModel.clearSearch();
       text = viewModel.search();
 
       expect(text).toBe(placeholder);
@@ -58,7 +58,7 @@ describe('Wikipedia Viewer', function() {
 
     it('Should clear user input and show placeholder when click on', function() {
       viewModel.search(userInput);
-      viewModel.clickClear();
+      viewModel.clearSearch();
       text = viewModel.search();
 
       expect(text).toBe(placeholder);
@@ -66,7 +66,7 @@ describe('Wikipedia Viewer', function() {
 
     it('Should show placeholder when click on search and then click on clear', function() {
       viewModel.focusSearch();
-      viewModel.clickClear();
+      viewModel.clearSearch();
       text = viewModel.search();
 
       expect(text).toBe(placeholder);

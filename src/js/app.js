@@ -26,8 +26,8 @@ function WikiViewerViewModel() {
     }
   };
 
-  this.clickClear = function() {
-    console.log('clickClear');
+  this.clearSearch = function() {
+    console.log('clearSearch');
     this.shrinkSearch();
 
     if (self.search() !== searchPlaceholder) {
