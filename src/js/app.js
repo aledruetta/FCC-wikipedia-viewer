@@ -18,6 +18,7 @@ function WikiViewerViewModel() {
   this.isFormCentered = ko.observable(true);
 
   this.focusSearch = function() {
+    console.log('focusSearch');
     this.growSearch();
 
     if (self.search() === searchPlaceholder) {
@@ -26,6 +27,7 @@ function WikiViewerViewModel() {
   };
 
   this.clickClear = function() {
+    console.log('clickClear');
     this.shrinkSearch();
 
     if (self.search() !== searchPlaceholder) {
@@ -34,6 +36,7 @@ function WikiViewerViewModel() {
   };
 
   this.processSearch = function() {
+    console.log('processSearch');
     if (this.search() === '') {
       this.search(searchPlaceholder);
       this.shrinkSearch();
