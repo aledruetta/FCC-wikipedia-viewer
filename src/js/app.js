@@ -12,9 +12,9 @@ function WikiViewerViewModel() {
   var inputLong = false;
 
   this.search = ko.observable(searchPlaceholder);
-  this.search.subscribe(function(latest) {
-    console.log(latest);
-  }, this);
+  // this.search.subscribe(function(latest) {
+  //   console.log(latest);
+  // }, this);
   this.isFormCentered = ko.observable(true);
 
   this.focusSearch = function() {
