@@ -12,13 +12,9 @@ function WikiViewerViewModel() {
   var inputLong = false;
 
   this.search = ko.observable(searchPlaceholder);
-  // this.search.subscribe(function(latest) {
-  //   console.log(latest);
-  // }, this);
   this.isFormCentered = ko.observable(true);
 
   this.focusSearch = function() {
-    console.log('focusSearch');
     this.growSearch();
 
     if (self.search() === searchPlaceholder) {
@@ -27,7 +23,6 @@ function WikiViewerViewModel() {
   };
 
   this.clearSearch = function() {
-    console.log('clearSearch');
     this.shrinkSearch();
 
     if (self.search() !== searchPlaceholder) {
@@ -36,7 +31,6 @@ function WikiViewerViewModel() {
   };
 
   this.processSearch = function() {
-    console.log('processSearch');
     if (this.search() === '') {
       this.search(searchPlaceholder);
       this.shrinkSearch();
