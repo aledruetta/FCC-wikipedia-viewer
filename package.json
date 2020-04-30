@@ -19,7 +19,7 @@
     "dist": "yarn run lint && yarn run inline && yarn run minify && yarn run images && yarn run w3c-dist"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "csslint": "^1.0.5",
     "font-awesome": "^4.7.0",
     "html-minifier": "^3.5.2",
